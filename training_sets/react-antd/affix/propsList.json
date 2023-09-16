@@ -1,0 +1,37 @@
+{
+  "affix": {
+    "name": "affix",
+    "description":"A component that wrap around another component to make it stick the viewport.",
+    "subComponentsList": [
+      {
+        "name": "affix",
+        "propList": [
+          {
+            "Name": "offsetBottom",
+            "Description": "Offset from the bottom of the viewport (in pixels)",
+            "Type": "number",
+            "Default": "-"
+          },
+          {
+            "Name": "offsetTop",
+            "Description": "Offset from the top of the viewport (in pixels)",
+            "Type": "number",
+            "Default": "0"
+          },
+          {
+            "Name": "target",
+            "Description": "Specifies the scrollable area DOM node",
+            "Type": "() => HTMLElement",
+            "Default": "() => window"
+          },
+          {
+            "Name": "onChange",
+            "Description": "Callback for when Affix state is changed",
+            "Type": "function(affixed)",
+            "Default": "-"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "switch": {
+    "name": "switch",
+    "subComponentsList": [
+      {
+        "name": "switch",
+        "propList": [
+          {
+            "Name": "autoFocus",
+            "Description": "Whether get focus when component mounted",
+            "Type": "boolean",
+            "Default": "false"
+          },
+          {
+            "Name": "checked",
+            "Description": "Determine whether the Switch is checked",
+            "Type": "boolean",
+            "Default": "false"
+          },
+          {
+            "Name": "checkedChildren",
+            "Description": "The content to be shown when the state is checked",
+            "Type": "ReactNode",
+            "Default": "-"
+          },
+          {
+            "Name": "className",
+            "Description": "The additional class to Switch",
+            "Type": "string",
+            "Default": "-"
+          },
+          {
+            "Name": "defaultChecked",
+            "Description": "Whether to set the initial state",
+            "Type": "boolean",
+            "Default": "false"
+          },
+          {
+            "Name": "disabled",
+            "Description": "Disable switch",
+            "Type": "boolean",
+            "Default": "false"
+          },
+          {
+            "Name": "loading",
+            "Description": "Loading state of switch",
+            "Type": "boolean",
+            "Default": "false"
+          },
+          {
+            "Name": "size",
+            "Description": "The size of the Switch, options: default small",
+            "Type": "string",
+            "Default": "default"
+          },
+          {
+            "Name": "unCheckedChildren",
+            "Description": "The content to be shown when the state is unchecked",
+            "Type": "ReactNode",
+            "Default": "-"
+          },
+          {
+            "Name": "onChange",
+            "Description": "Trigger when the checked state is changing",
+            "Type": "function(checked: boolean, event: Event)",
+            "Default": "-"
+          },
+          {
+            "Name": "onClick",
+            "Description": "Trigger when clicked",
+            "Type": "function(checked: boolean, event: Event)",
+            "Default": "-"
+          }
+        ]
+      }
+    ]
+  }
+}

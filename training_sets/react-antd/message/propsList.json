@@ -1,0 +1,30 @@
+{
+  "message": {
+    "name": "message",
+    "subComponentsList": [
+      {
+        "name": "Global static methods#",
+        "propList": [
+          {
+            "Name": "content",
+            "Description": "The content of the message",
+            "Type": "ReactNode | config",
+            "Default": "-"
+          },
+          {
+            "Name": "duration",
+            "Description": "Time(seconds) before auto-dismiss, don't dismiss if set to 0",
+            "Type": "number",
+            "Default": "1.5"
+          },
+          {
+            "Name": "onClose",
+            "Description": "Specify a function that will be called when the message is closed",
+            "Type": "function",
+            "Default": "-"
+          }
+        ]
+      }
+    ]
+  }
+}

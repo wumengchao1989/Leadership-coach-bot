@@ -1,0 +1,68 @@
+{
+  "image": {
+    "name": "image",
+    "subComponentsList": [
+      {
+        "name": "image",
+        "propList": [
+          {
+            "Name": "alt",
+            "Description": "Image description",
+            "Type": "string",
+            "Default": "-",
+            "Version": "4.6.0"
+          },
+          {
+            "Name": "fallback",
+            "Description": "Load failure fault-tolerant src",
+            "Type": "string",
+            "Default": "-",
+            "Version": "4.6.0"
+          },
+          {
+            "Name": "height",
+            "Description": "Image height",
+            "Type": "string | number",
+            "Default": "-",
+            "Version": "4.6.0"
+          },
+          {
+            "Name": "placeholder",
+            "Description": "Load placeholder, use default placeholder when set true",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": "4.6.0"
+          },
+          {
+            "Name": "preview",
+            "Description": "preview config, disabled when false",
+            "Type": "boolean | previewType",
+            "Default": "true",
+            "Version": "4.6.0 previewType:4.7.0"
+          },
+          {
+            "Name": "src",
+            "Description": "Image path",
+            "Type": "string",
+            "Default": "-",
+            "Version": "4.6.0"
+          },
+          {
+            "Name": "width",
+            "Description": "Image width",
+            "Type": "string | number",
+            "Default": "-",
+            "Version": "4.6.0"
+          },
+          {
+            "Name": "onError",
+            "Description": "Load failed callback",
+            "Type": "(event: Event) => void",
+            "Default": "-",
+            "Version": "4.12.0"
+          }
+        ]
+      }
+    ]
+  }
+}

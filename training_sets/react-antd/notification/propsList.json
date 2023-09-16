@@ -1,0 +1,102 @@
+{
+  "notification": {
+    "name": "notification",
+    "subComponentsList": [
+      {
+        "name": "notification",
+        "propList": [
+          {
+            "Name": "bottom",
+            "Description": "Distance from the bottom of the viewport, when placement is bottomRight or bottomLeft (unit: pixels)",
+            "Type": "number",
+            "Default": "24"
+          },
+          {
+            "Name": "btn",
+            "Description": "Customized close button",
+            "Type": "ReactNode",
+            "Default": "-"
+          },
+          {
+            "Name": "className",
+            "Description": "Customized CSS class",
+            "Type": "string",
+            "Default": "-"
+          },
+          {
+            "Name": "closeIcon",
+            "Description": "Custom close icon",
+            "Type": "ReactNode",
+            "Default": "-"
+          },
+          {
+            "Name": "description",
+            "Description": "The content of notification box (required)",
+            "Type": "ReactNode",
+            "Default": "-"
+          },
+          {
+            "Name": "duration",
+            "Description": "Time in seconds before Notification is closed. When set to 0 or null, it will never be closed automatically",
+            "Type": "number",
+            "Default": "4.5"
+          },
+          {
+            "Name": "getContainer",
+            "Description": "Return the mount node for Notification",
+            "Type": "() => HTMLNode",
+            "Default": "() => document.body"
+          },
+          {
+            "Name": "icon",
+            "Description": "Customized icon",
+            "Type": "ReactNode",
+            "Default": "-"
+          },
+          {
+            "Name": "key",
+            "Description": "The unique identifier of the Notification",
+            "Type": "string",
+            "Default": "-"
+          },
+          {
+            "Name": "message",
+            "Description": "The title of notification box (required)",
+            "Type": "ReactNode",
+            "Default": "-"
+          },
+          {
+            "Name": "placement",
+            "Description": "Position of Notification, can be one of topLeft topRight bottomLeft bottomRight",
+            "Type": "string",
+            "Default": "topRight"
+          },
+          {
+            "Name": "style",
+            "Description": "Customized inline style",
+            "Type": "CSSProperties",
+            "Default": "-"
+          },
+          {
+            "Name": "top",
+            "Description": "Distance from the top of the viewport, when placement is topRight or topLeft (unit: pixels)",
+            "Type": "number",
+            "Default": "24"
+          },
+          {
+            "Name": "onClick",
+            "Description": "Specify a function that will be called when the notification is clicked",
+            "Type": "function",
+            "Default": "-"
+          },
+          {
+            "Name": "onClose",
+            "Description": "Trigger when notification closed",
+            "Type": "function",
+            "Default": "-"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "popover": {
+    "name": "popover",
+    "subComponentsList": [
+      {
+        "name": "popover",
+        "propList": [
+          {
+            "Name": "content",
+            "Description": "Content of the card",
+            "Type": "ReactNode | () => ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "title",
+            "Description": "Title of the card",
+            "Type": "ReactNode | () => ReactNode",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "input": {
+    "name": "input",
+    "subComponentsList": [
+      {
+        "name": "input",
+        "propList": [
+          {
+            "Name": "addonAfter",
+            "Description": "The label text displayed after (on the right side of) the input field",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "addonBefore",
+            "Description": "The label text displayed before (on the left side of) the input field",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "allowClear",
+            "Description": "If allow to remove input content with clear icon",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "bordered",
+            "Description": "Whether has border style",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": "4.5.0"
+          },
+          {
+            "Name": "defaultValue",
+            "Description": "The initial input content",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "disabled",
+            "Description": "Whether the input is disabled",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "id",
+            "Description": "The ID for input",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "maxLength",
+            "Description": "The max length",
+            "Type": "number",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "prefix",
+            "Description": "The prefix icon for the Input",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "size",
+            "Description": "The size of the input box. Note: in the context of a form, the large size is used",
+            "Type": "large | middle | small",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "suffix",
+            "Description": "The suffix icon for the Input",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "type",
+            "Description": "The type of input, see: MDN( use Input.TextArea instead of type=\"textarea\")",
+            "Type": "string",
+            "Default": "text",
+            "Version": ""
+          },
+          {
+            "Name": "value",
+            "Description": "The input content value",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onChange",
+            "Description": "Callback when user input",
+            "Type": "function(e)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onPressEnter",
+            "Description": "The callback function that is triggered when Enter key is pressed",
+            "Type": "function(e)",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

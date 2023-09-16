@@ -1,0 +1,292 @@
+{
+  "tree": {
+    "name": "tree",
+    "subComponentsList": [
+      {
+        "name": "tree",
+        "propList": [
+          {
+            "Name": "allowDrop",
+            "Description": "Whether to allow dropping on the node",
+            "Type": "({ dropNode, dropPosition }) => boolean",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "autoExpandParent",
+            "Description": "Whether to automatically expand a parent treeNode",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "blockNode",
+            "Description": "Whether treeNode fill remaining horizontal space",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "checkable",
+            "Description": "Add a Checkbox before the treeNodes",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "checkedKeys",
+            "Description": "(Controlled) Specifies the keys of the checked treeNodes (PS: When this specifies the key of a treeNode which is also a parent treeNode, all the children treeNodes of will be checked; and vice versa, when it specifies the key of a treeNode which is a child treeNode, its parent treeNode will also be checked. When checkable and checkStrictly is true, its object has checked and halfChecked property. Regardless of whether the child or parent treeNode is checked, they won't impact each other",
+            "Type": "string[] | {checked: string[], halfChecked: string[]}",
+            "Default": "[]",
+            "Version": ""
+          },
+          {
+            "Name": "checkStrictly",
+            "Description": "Check treeNode precisely; parent treeNode and children treeNodes are not associated",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "defaultCheckedKeys",
+            "Description": "Specifies the keys of the default checked treeNodes",
+            "Type": "string[]",
+            "Default": "[]",
+            "Version": ""
+          },
+          {
+            "Name": "defaultExpandAll",
+            "Description": "Whether to expand all treeNodes by default",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "defaultExpandedKeys",
+            "Description": "Specify the keys of the default expanded treeNodes",
+            "Type": "string[]",
+            "Default": "[]",
+            "Version": ""
+          },
+          {
+            "Name": "defaultExpandParent",
+            "Description": "If auto expand parent treeNodes when init",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "defaultSelectedKeys",
+            "Description": "Specifies the keys of the default selected treeNodes",
+            "Type": "string[]",
+            "Default": "[]",
+            "Version": ""
+          },
+          {
+            "Name": "disabled",
+            "Description": "Whether disabled the tree",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "draggable",
+            "Description": "Specifies whether this Tree or the node is draggable (IE > 8)",
+            "Type": "boolean | ((node: DataNode) => boolean)",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "expandedKeys",
+            "Description": "(Controlled) Specifies the keys of the expanded treeNodes",
+            "Type": "string[]",
+            "Default": "[]",
+            "Version": ""
+          },
+          {
+            "Name": "filterTreeNode",
+            "Description": "Defines a function to filter (highlight) treeNodes. When the function returns true, the corresponding treeNode will be highlighted",
+            "Type": "function(node)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "height",
+            "Description": "Config virtual scroll height. Will not support horizontal scroll when enable this",
+            "Type": "number",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "icon",
+            "Description": "Customize treeNode icon",
+            "Type": "ReactNode | (props) => ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "loadData",
+            "Description": "Load data asynchronously",
+            "Type": "function(node)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "loadedKeys",
+            "Description": "(Controlled) Set loaded tree nodes. Need work with loadData",
+            "Type": "string[]",
+            "Default": "[]",
+            "Version": ""
+          },
+          {
+            "Name": "multiple",
+            "Description": "Allows selecting multiple treeNodes",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "selectable",
+            "Description": "Whether can be selected",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "selectedKeys",
+            "Description": "(Controlled) Specifies the keys of the selected treeNodes",
+            "Type": "string[]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "showIcon",
+            "Description": "Shows the icon before a TreeNode's title. There is no default style; you must set a custom style for it if set to true",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "showLine",
+            "Description": "Shows a connecting line",
+            "Type": "boolean | {showLeafIcon: boolean}",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "switcherIcon",
+            "Description": "Customize collapse/expand icon of tree node",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "titleRender",
+            "Description": "Customize tree node title render",
+            "Type": "(nodeData) => ReactNode",
+            "Default": "-",
+            "Version": "4.5.0"
+          },
+          {
+            "Name": "treeData",
+            "Description": "The treeNodes data Array, if set it then you need not to construct children TreeNode. (key should be unique across the whole array)",
+            "Type": "array<{ key, title, children, [disabled, selectable] }>",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "treeLoadedKeys",
+            "Description": "(Controlled) Set loaded tree nodes, work with loadData only",
+            "Type": "string[]",
+            "Default": "[]",
+            "Version": ""
+          },
+          {
+            "Name": "virtual",
+            "Description": "Disable virtual scroll when set to false",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": "4.1.0"
+          },
+          {
+            "Name": "onCheck",
+            "Description": "Callback function for when the onCheck event occurs",
+            "Type": "function(checkedKeys, e:{checked: bool, checkedNodes, node, event, halfCheckedKeys})",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onDragEnd",
+            "Description": "Callback function for when the onDragEnd event occurs",
+            "Type": "function({event, node})",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onDragEnter",
+            "Description": "Callback function for when the onDragEnter event occurs",
+            "Type": "function({event, node, expandedKeys})",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onDragLeave",
+            "Description": "Callback function for when the onDragLeave event occurs",
+            "Type": "function({event, node})",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onDragOver",
+            "Description": "Callback function for when the onDragOver event occurs",
+            "Type": "function({event, node})",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onDragStart",
+            "Description": "Callback function for when the onDragStart event occurs",
+            "Type": "function({event, node})",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onDrop",
+            "Description": "Callback function for when the onDrop event occurs",
+            "Type": "function({event, node, dragNode, dragNodesKeys})",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onExpand",
+            "Description": "Callback function for when a treeNode is expanded or collapsed",
+            "Type": "function(expandedKeys, {expanded: bool, node})",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onLoad",
+            "Description": "Callback function for when a treeNode is loaded",
+            "Type": "function(loadedKeys, {event, node})",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onRightClick",
+            "Description": "Callback function for when the user right clicks a treeNode",
+            "Type": "function({event, node})",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onSelect",
+            "Description": "Callback function for when the user clicks a treeNode",
+            "Type": "function(selectedKeys, e:{selected: bool, selectedNodes, node, event})",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

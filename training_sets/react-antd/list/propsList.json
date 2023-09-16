@@ -1,0 +1,110 @@
+{
+  "list": {
+    "name": "list",
+    "subComponentsList": [
+      {
+        "name": "list",
+        "propList": [
+          {
+            "Name": "bordered",
+            "Description": "Toggles rendering of the border around the list",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "dataSource",
+            "Description": "DataSource array for list",
+            "Type": "any[]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "footer",
+            "Description": "List footer renderer",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "grid",
+            "Description": "The grid type of list. You can set grid to something like {gutter: 16, column: 4}",
+            "Type": "object",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "header",
+            "Description": "List header renderer",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "itemLayout",
+            "Description": "The layout of list",
+            "Type": "horizontal | vertical",
+            "Default": "horizontal",
+            "Version": ""
+          },
+          {
+            "Name": "loading",
+            "Description": "Shows a loading indicator while the contents of the list are being fetched",
+            "Type": "boolean | SpinProps (more)",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "loadMore",
+            "Description": "Shows a load more content",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "locale",
+            "Description": "The i18n text including empty text",
+            "Type": "object",
+            "Default": "{emptyText: No Data}",
+            "Version": ""
+          },
+          {
+            "Name": "pagination",
+            "Description": "Pagination config, hide it by setting it to false",
+            "Type": "boolean | object",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "renderItem",
+            "Description": "Customize list item when using dataSource",
+            "Type": "(item) => ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "rowKey",
+            "Description": "Item's unique key, could be a string or function that returns a string",
+            "Type": "string | Function(record): string",
+            "Default": "key",
+            "Version": ""
+          },
+          {
+            "Name": "size",
+            "Description": "Size of list",
+            "Type": "default | large | small",
+            "Default": "default",
+            "Version": ""
+          },
+          {
+            "Name": "split",
+            "Description": "Toggles rendering of the split under the list item",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

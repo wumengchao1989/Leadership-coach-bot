@@ -1,0 +1,42 @@
+{
+  "radio": {
+    "name": "radio",
+    "subComponentsList": [
+      {
+        "name": "radio",
+        "propList": [
+          {
+            "Name": "autoFocus",
+            "Description": "Whether get focus when component mounted",
+            "Type": "boolean",
+            "Default": "false"
+          },
+          {
+            "Name": "checked",
+            "Description": "Specifies whether the radio is selected",
+            "Type": "boolean",
+            "Default": "false"
+          },
+          {
+            "Name": "defaultChecked",
+            "Description": "Specifies the initial state: whether or not the radio is selected",
+            "Type": "boolean",
+            "Default": "false"
+          },
+          {
+            "Name": "disabled",
+            "Description": "Disable radio",
+            "Type": "boolean",
+            "Default": "false"
+          },
+          {
+            "Name": "value",
+            "Description": "According to value for comparison, to determine whether the selected",
+            "Type": "any",
+            "Default": "-"
+          }
+        ]
+      }
+    ]
+  }
+}

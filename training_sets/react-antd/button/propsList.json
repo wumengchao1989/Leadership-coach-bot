@@ -1,0 +1,103 @@
+{
+  "button": {
+    "name": "button",
+    "subComponentsList": [
+      {
+        "name": "button",
+        "propList": [
+          {
+            "Name": "block",
+            "Description": "Option to fit button width to its parent width",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "danger",
+            "Description": "Set the danger status of button",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "disabled",
+            "Description": "Disabled state of button",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "ghost",
+            "Description": "Make background transparent and invert text and border colors",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "href",
+            "Description": "Redirect url of link button",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "htmlType",
+            "Description": "Set the original html type of button, see: MDN",
+            "Type": "string",
+            "Default": "button",
+            "Version": ""
+          },
+          {
+            "Name": "icon",
+            "Description": "Set the icon component of button",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "loading",
+            "Description": "Set the loading status of button",
+            "Type": "boolean | { delay: number }",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "shape",
+            "Description": "Can be set button shape",
+            "Type": "circle | round",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "size",
+            "Description": "Set the size of button",
+            "Type": "large | middle | small",
+            "Default": "middle",
+            "Version": ""
+          },
+          {
+            "Name": "target",
+            "Description": "Same as target attribute of a, works when href is specified",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "type",
+            "Description": "Can be set to primary ghost dashed link text default",
+            "Type": "string",
+            "Default": "default",
+            "Version": ""
+          },
+          {
+            "Name": "onClick",
+            "Description": "Set the handler to handle click event",
+            "Type": "(event) => void",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "badge": {
+    "name": "badge",
+    "subComponentsList": [
+      {
+        "name": "badge",
+        "propList": [
+          {
+            "Name": "color",
+            "Description": "Customize Badge dot color",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "count",
+            "Description": "Number to show in badge",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "dot",
+            "Description": "Whether to display a red dot instead of count",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "offset",
+            "Description": "Set offset of the badge dot",
+            "Type": "[number, number]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "overflowCount",
+            "Description": "Max count to show",
+            "Type": "number",
+            "Default": "99",
+            "Version": ""
+          },
+          {
+            "Name": "showZero",
+            "Description": "Whether to show badge when count is zero",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "size",
+            "Description": "If count is set, size sets the size of badge",
+            "Type": "default | small",
+            "Default": "-",
+            "Version": "4.6.0"
+          },
+          {
+            "Name": "status",
+            "Description": "Set Badge as a status dot",
+            "Type": "success | processing | default | error | warning",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "text",
+            "Description": "If status is set, text sets the display text of the status dot",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "title",
+            "Description": "Text to show when hovering over the badge",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

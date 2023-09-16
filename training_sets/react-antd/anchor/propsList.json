@@ -1,0 +1,75 @@
+{
+  "anchor": {
+    "name": "anchor",
+    "subComponentsList": [
+      {
+        "name": "anchor",
+        "propList": [
+          {
+            "Name": "affix",
+            "Description": "Fixed mode of Anchor",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "bounds",
+            "Description": "Bounding distance of anchor area",
+            "Type": "number",
+            "Default": "5",
+            "Version": ""
+          },
+          {
+            "Name": "getContainer",
+            "Description": "Scrolling container",
+            "Type": "() => HTMLElement",
+            "Default": "() => window",
+            "Version": ""
+          },
+          {
+            "Name": "getCurrentAnchor",
+            "Description": "Customize the anchor highlight",
+            "Type": "() => string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "offsetTop",
+            "Description": "Pixels to offset from top when calculating position of scroll",
+            "Type": "number",
+            "Default": "0",
+            "Version": ""
+          },
+          {
+            "Name": "showInkInFixed",
+            "Description": "Whether show ink-balls when affix={false}",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "targetOffset",
+            "Description": "Anchor scroll offset, default as offsetTop, example",
+            "Type": "number",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onChange",
+            "Description": "Listening for anchor link change",
+            "Type": "(currentActiveLink: string) => void",
+            "Default": "",
+            "Version": ""
+          },
+          {
+            "Name": "onClick",
+            "Description": "Set the handler to handle click event",
+            "Type": "function(e: Event, link: Object)",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

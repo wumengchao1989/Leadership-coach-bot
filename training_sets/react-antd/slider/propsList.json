@@ -1,0 +1,159 @@
+{
+  "slider": {
+    "name": "slider",
+    "subComponentsList": [
+      {
+        "name": "slider",
+        "propList": [
+          {
+            "Name": "autoFocus",
+            "Description": "Whether get focus when component mounted",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "defaultValue",
+            "Description": "The default value of slider. When range is false, use number, otherwise, use [number, number]",
+            "Type": "number | [number, number]",
+            "Default": "0 | [0, 0]",
+            "Version": ""
+          },
+          {
+            "Name": "disabled",
+            "Description": "If true, the slider will not be interactable",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "dots",
+            "Description": "Whether the thumb can drag over tick only",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "getTooltipPopupContainer",
+            "Description": "The DOM container of the Tooltip, the default behavior is to create a div element in body",
+            "Type": "(triggerNode) => HTMLElement",
+            "Default": "() => document.body",
+            "Version": ""
+          },
+          {
+            "Name": "included",
+            "Description": "Make effect when marks not null, true means containment and false means coordinative",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "marks",
+            "Description": "Tick mark of Slider, type of key must be number, and must in closed interval [min, max], each mark can declare its own style",
+            "Type": "object",
+            "Default": "{ number: ReactNode } | { number: { style: CSSProperties, label: ReactNode } }",
+            "Version": ""
+          },
+          {
+            "Name": "max",
+            "Description": "The maximum value the slider can slide to",
+            "Type": "number",
+            "Default": "100",
+            "Version": ""
+          },
+          {
+            "Name": "min",
+            "Description": "The minimum value the slider can slide to",
+            "Type": "number",
+            "Default": "0",
+            "Version": ""
+          },
+          {
+            "Name": "range",
+            "Description": "Dual thumb mode",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "reverse",
+            "Description": "Reverse the component",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "step",
+            "Description": "The granularity the slider can step through values. Must greater than 0, and be divided by (max - min) . When marks no null, step can be null",
+            "Type": "number | null",
+            "Default": "1",
+            "Version": ""
+          },
+          {
+            "Name": "tipFormatter",
+            "Description": "Slider will pass its value to tipFormatter, and display its value in Tooltip, and hide Tooltip when return value is null",
+            "Type": "value => ReactNode | null",
+            "Default": "IDENTITY",
+            "Version": ""
+          },
+          {
+            "Name": "tooltipPlacement",
+            "Description": "Set Tooltip display position. Ref Tooltip",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "tooltipVisible",
+            "Description": "If true, Tooltip will show always, or it will not show anyway, even if dragging or hovering",
+            "Type": "boolean",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "value",
+            "Description": "The value of slider. When range is false, use number, otherwise, use [number, number]",
+            "Type": "number | [number, number]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "vertical",
+            "Description": "If true, the slider will be vertical",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "onAfterChange",
+            "Description": "Fire when onmouseup is fired",
+            "Type": "(value) => void",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onChange",
+            "Description": "Callback function that is fired when the user changes the slider's value",
+            "Type": "(value) => void",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "trackStyle",
+            "Description": "The style of slider track",
+            "Type": "CSSProperties",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "handleStyle",
+            "Description": "The style of slider handle",
+            "Type": "CSSProperties",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

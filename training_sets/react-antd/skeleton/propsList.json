@@ -1,0 +1,48 @@
+{
+  "skeleton": {
+    "name": "skeleton",
+    "subComponentsList": [
+      {
+        "name": "skeleton",
+        "propList": [
+          {
+            "Name": "active",
+            "Description": "Show animation effect",
+            "Type": "boolean",
+            "Default": "false"
+          },
+          {
+            "Name": "avatar",
+            "Description": "Show avatar placeholder",
+            "Type": "boolean | SkeletonAvatarProps",
+            "Default": "false"
+          },
+          {
+            "Name": "loading",
+            "Description": "Display the skeleton when true",
+            "Type": "boolean",
+            "Default": "-"
+          },
+          {
+            "Name": "paragraph",
+            "Description": "Show paragraph placeholder",
+            "Type": "boolean | SkeletonParagraphProps",
+            "Default": "true"
+          },
+          {
+            "Name": "round",
+            "Description": "Show paragraph and title radius when true",
+            "Type": "boolean",
+            "Default": "false"
+          },
+          {
+            "Name": "title",
+            "Description": "Show title placeholder",
+            "Type": "boolean | SkeletonTitleProps",
+            "Default": "true"
+          }
+        ]
+      }
+    ]
+  }
+}

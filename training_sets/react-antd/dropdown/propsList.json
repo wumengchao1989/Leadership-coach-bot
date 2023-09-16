@@ -1,0 +1,89 @@
+{
+  "dropdown": {
+    "name": "dropdown",
+    "subComponentsList": [
+      {
+        "name": "dropdown",
+        "propList": [
+          {
+            "Name": "arrow",
+            "Description": "Whether the dropdown arrow should be visible",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "disabled",
+            "Description": "Whether the dropdown menu is disabled",
+            "Type": "boolean",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "destroyPopupOnHide",
+            "Description": "Whether destroy dropdown when hidden",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "getPopupContainer",
+            "Description": "To set the container of the dropdown menu. The default is to create a div element in body, but you can reset it to the scrolling area and make a relative reposition. Example on CodePen",
+            "Type": "(triggerNode: HTMLElement) => HTMLElement",
+            "Default": "() => document.body",
+            "Version": ""
+          },
+          {
+            "Name": "overlay",
+            "Description": "The dropdown menu",
+            "Type": "Menu | () => Menu",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "overlayClassName",
+            "Description": "The class name of the dropdown root element",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "overlayStyle",
+            "Description": "The style of the dropdown root element",
+            "Type": "CSSProperties",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "placement",
+            "Description": "Placement of popup menu: bottomLeft, bottomCenter, bottomRight, topLeft, topCenter or topRight",
+            "Type": "string",
+            "Default": "bottomLeft",
+            "Version": ""
+          },
+          {
+            "Name": "trigger",
+            "Description": "The trigger mode which executes the dropdown action. Note that hover can't be used on touchscreens",
+            "Type": "Array<click|hover|contextMenu>",
+            "Default": "[hover]",
+            "Version": ""
+          },
+          {
+            "Name": "visible",
+            "Description": "Whether the dropdown menu is currently visible",
+            "Type": "boolean",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onVisibleChange",
+            "Description": "Called when the visible state is changed. Not trigger when hidden by click item",
+            "Type": "(visible: boolean) => void",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

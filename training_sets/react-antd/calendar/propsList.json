@@ -1,0 +1,117 @@
+{
+  "calendar": {
+    "name": "calendar",
+    "subComponentsList": [
+      {
+        "name": "calendar",
+        "propList": [
+          {
+            "Name": "dateCellRender",
+            "Description": "Customize the display of the date cell, the returned content will be appended to the cell",
+            "Type": "function(date: moment): ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "dateFullCellRender",
+            "Description": "Customize the display of the date cell, the returned content will override the cell",
+            "Type": "function(date: moment): ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "defaultValue",
+            "Description": "The date selected by default",
+            "Type": "moment",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "disabledDate",
+            "Description": "Function that specifies the dates that cannot be selected, currentDate is same moment object as value prop which you shouldn't mutate it](https://github.com/ant-design/ant-design/issues/30987)",
+            "Type": "(currentDate: moment) => boolean",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "fullscreen",
+            "Description": "Whether to display in full-screen",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "headerRender",
+            "Description": "Render custom header in panel",
+            "Type": "function(object:{value: moment, type: string, onChange: f(), onTypeChange: f()})",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "locale",
+            "Description": "The calendar's locale",
+            "Type": "object",
+            "Default": "(default)",
+            "Version": ""
+          },
+          {
+            "Name": "mode",
+            "Description": "The display mode of the calendar",
+            "Type": "month | year",
+            "Default": "month",
+            "Version": ""
+          },
+          {
+            "Name": "monthCellRender",
+            "Description": "Customize the display of the month cell, the returned content will be appended to the cell",
+            "Type": "function(date: moment): ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "monthFullCellRender",
+            "Description": "Customize the display of the month cell, the returned content will override the cell",
+            "Type": "function(date: moment): ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "validRange",
+            "Description": "To set valid range",
+            "Type": "[moment, moment]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "value",
+            "Description": "The current selected date",
+            "Type": "moment",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onChange",
+            "Description": "Callback for when date changes",
+            "Type": "function(date: moment）",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onPanelChange",
+            "Description": "Callback for when panel changes",
+            "Type": "function(date: moment, mode: string)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onSelect",
+            "Description": "Callback for when a date is selected",
+            "Type": "function(date: moment）",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "table": {
+    "name": "table",
+    "subComponentsList": [
+      {
+        "name": "table",
+        "propList": [
+          {
+            "Name": "bordered",
+            "Description": "Whether to show all table borders",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "columns",
+            "Description": "Columns of table",
+            "Type": "ColumnsType[]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "components",
+            "Description": "Override default table elements",
+            "Type": "TableComponents",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "dataSource",
+            "Description": "Data record array to be displayed",
+            "Type": "object[]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "expandable",
+            "Description": "Config expandable content",
+            "Type": "expandable",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "footer",
+            "Description": "Table footer renderer",
+            "Type": "function(currentPageData)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "getPopupContainer",
+            "Description": "The render container of dropdowns in table",
+            "Type": "(triggerNode) => HTMLElement",
+            "Default": "() => TableHtmlElement",
+            "Version": ""
+          },
+          {
+            "Name": "loading",
+            "Description": "Loading status of table",
+            "Type": "boolean | Spin Props",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "locale",
+            "Description": "The i18n text including filter, sort, empty text, etc",
+            "Type": "object",
+            "Default": "filterConfirm: Ok\nfilterReset: Reset\nemptyText: No Data\nDefault",
+            "Version": ""
+          },
+          {
+            "Name": "pagination",
+            "Description": "Config of pagination. You can ref table pagination config or full pagination document, hide it by setting it to false",
+            "Type": "object",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "rowClassName",
+            "Description": "Row's className",
+            "Type": "function(record, index): string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "rowKey",
+            "Description": "Row's unique key, could be a string or function that returns a string",
+            "Type": "string | function(record): string",
+            "Default": "key",
+            "Version": ""
+          },
+          {
+            "Name": "rowSelection",
+            "Description": "Row selection config",
+            "Type": "object",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "scroll",
+            "Description": "Whether the table can be scrollable, config",
+            "Type": "object",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "showHeader",
+            "Description": "Whether to show table header",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "showSorterTooltip",
+            "Description": "The header show next sorter direction tooltip. It will be set as the property of Tooltip if its type is object",
+            "Type": "boolean | Tooltip props",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "size",
+            "Description": "Size of table",
+            "Type": "default | middle | small",
+            "Default": "default",
+            "Version": ""
+          },
+          {
+            "Name": "sortDirections",
+            "Description": "Supported sort way, could be ascend, descend",
+            "Type": "Array",
+            "Default": "[ascend, descend]",
+            "Version": ""
+          },
+          {
+            "Name": "sticky",
+            "Description": "Set sticky header and scroll bar",
+            "Type": "boolean | {offsetHeader?: number, offsetScroll?: number, getContainer?: () => HTMLElement}",
+            "Default": "-",
+            "Version": "4.6.0 (getContainer: 4.7.0)"
+          },
+          {
+            "Name": "summary",
+            "Description": "Summary content",
+            "Type": "(currentData) => ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "tableLayout",
+            "Description": "The table-layout attribute of table element",
+            "Type": "- | auto | fixed",
+            "Default": "-\nfixed when header/columns are fixed, or using column.ellipsis",
+            "Version": ""
+          },
+          {
+            "Name": "title",
+            "Description": "Table title renderer",
+            "Type": "function(currentPageData)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onChange",
+            "Description": "Callback executed when pagination, filters or sorter is changed",
+            "Type": "function(pagination, filters, sorter, extra: { currentDataSource: [], action: paginate | sort | filter })",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onHeaderRow",
+            "Description": "Set props on per header row",
+            "Type": "function(columns, index)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onRow",
+            "Description": "Set props on per row",
+            "Type": "function(record, index)",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

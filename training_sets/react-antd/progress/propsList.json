@@ -1,0 +1,66 @@
+{
+  "progress": {
+    "name": "progress",
+    "subComponentsList": [
+      {
+        "name": "progress",
+        "propList": [
+          {
+            "Name": "format",
+            "Description": "The template function of the content",
+            "Type": "function(percent, successPercent)",
+            "Default": "(percent) => percent + %"
+          },
+          {
+            "Name": "percent",
+            "Description": "To set the completion percentage",
+            "Type": "number",
+            "Default": "0"
+          },
+          {
+            "Name": "showInfo",
+            "Description": "Whether to display the progress value and the status icon",
+            "Type": "boolean",
+            "Default": "true"
+          },
+          {
+            "Name": "status",
+            "Description": "To set the status of the Progress, options: success exception normal active(line only)",
+            "Type": "string",
+            "Default": "-"
+          },
+          {
+            "Name": "strokeColor",
+            "Description": "The color of progress bar",
+            "Type": "string",
+            "Default": "-"
+          },
+          {
+            "Name": "strokeLinecap",
+            "Description": "To set the style of the progress linecap",
+            "Type": "round | square",
+            "Default": "round"
+          },
+          {
+            "Name": "success",
+            "Description": "Configs of successfully progress bar",
+            "Type": "{ percent: number, strokeColor: string }",
+            "Default": "-"
+          },
+          {
+            "Name": "trailColor",
+            "Description": "The color of unfilled part",
+            "Type": "string",
+            "Default": "-"
+          },
+          {
+            "Name": "type",
+            "Description": "To set the type, options: line circle dashboard",
+            "Type": "string",
+            "Default": "line"
+          }
+        ]
+      }
+    ]
+  }
+}

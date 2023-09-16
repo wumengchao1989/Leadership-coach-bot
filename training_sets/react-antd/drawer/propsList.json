@@ -1,0 +1,194 @@
+{
+  "drawer": {
+    "name": "drawer",
+    "subComponentsList": [
+      {
+        "name": "drawer",
+        "propList": [
+          {
+            "Name": "afterVisibleChange",
+            "Description": "Callback after the animation ends when switching drawers",
+            "Type": "function(visible)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "bodyStyle",
+            "Description": "Style of the drawer content part",
+            "Type": "object",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "className",
+            "Description": "The class name of the container of the Drawer dialog",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "closable",
+            "Description": "Whether a close (x) button is visible on top right of the Drawer dialog or not",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "closeIcon",
+            "Description": "Custom close icon",
+            "Type": "ReactNode",
+            "Default": "<CloseOutlined />",
+            "Version": ""
+          },
+          {
+            "Name": "contentWrapperStyle",
+            "Description": "Style of the drawer wrapper of content part",
+            "Type": "CSSProperties",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "destroyOnClose",
+            "Description": "Whether to unmount child components on closing drawer or not",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "drawerStyle",
+            "Description": "Style of the popup layer element",
+            "Type": "object",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "footer",
+            "Description": "The footer for Drawer",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "footerStyle",
+            "Description": "Style of the drawer footer part",
+            "Type": "CSSProperties",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "forceRender",
+            "Description": "Prerender Drawer component forcely",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "getContainer",
+            "Description": "Return the mounted node for Drawer",
+            "Type": "HTMLElement | () => HTMLElement | Selectors | false",
+            "Default": "body",
+            "Version": ""
+          },
+          {
+            "Name": "headerStyle",
+            "Description": "Style of the drawer header part",
+            "Type": "object",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "height",
+            "Description": "Placement is top or bottom, height of the Drawer dialog",
+            "Type": "string | number",
+            "Default": "256",
+            "Version": ""
+          },
+          {
+            "Name": "keyboard",
+            "Description": "Whether support press esc to close",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "mask",
+            "Description": "Whether to show mask or not",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "maskClosable",
+            "Description": "Clicking on the mask (area outside the Drawer) to close the Drawer or not",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "maskStyle",
+            "Description": "Style for Drawer's mask element",
+            "Type": "CSSProperties",
+            "Default": "{}",
+            "Version": ""
+          },
+          {
+            "Name": "placement",
+            "Description": "The placement of the Drawer",
+            "Type": "top | right | bottom | left",
+            "Default": "right",
+            "Version": ""
+          },
+          {
+            "Name": "push",
+            "Description": "Nested drawers push behavior",
+            "Type": "boolean | { distance: string | number }",
+            "Default": "{ distance: 180 }",
+            "Version": "4.5.0+"
+          },
+          {
+            "Name": "style",
+            "Description": "Style of wrapper element which contains mask compare to drawerStyle",
+            "Type": "CSSProperties",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "title",
+            "Description": "The title for Drawer",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "visible",
+            "Description": "Whether the Drawer dialog is visible or not",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "width",
+            "Description": "Width of the Drawer dialog",
+            "Type": "string | number",
+            "Default": "256",
+            "Version": ""
+          },
+          {
+            "Name": "zIndex",
+            "Description": "The z-index of the Drawer",
+            "Type": "number",
+            "Default": "1000",
+            "Version": ""
+          },
+          {
+            "Name": "onClose",
+            "Description": "Specify a callback that will be called when a user clicks mask, close button or Cancel button",
+            "Type": "function(e)",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "alert": {
+    "name": "alert",
+    "subComponentsList": [
+      {
+        "name": "alert",
+        "propList": [
+          {
+            "Name": "action",
+            "Description": "The action of Alert",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": "4.9.0"
+          },
+          {
+            "Name": "afterClose",
+            "Description": "Called when close animation is finished",
+            "Type": "() => void",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "banner",
+            "Description": "Whether to show as banner",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "closable",
+            "Description": "Whether Alert can be closed",
+            "Type": "boolean",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "closeText",
+            "Description": "Close text to show",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "description",
+            "Description": "Additional content of Alert",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "icon",
+            "Description": "Custom icon, effective when showIcon is true",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "message",
+            "Description": "Content of Alert",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "showIcon",
+            "Description": "Whether to show icon",
+            "Type": "boolean",
+            "Default": "false, in banner mode default is true",
+            "Version": ""
+          },
+          {
+            "Name": "type",
+            "Description": "Type of Alert styles, options: success, info, warning, error",
+            "Type": "string",
+            "Default": "info, in banner mode default is warning",
+            "Version": ""
+          },
+          {
+            "Name": "onClose",
+            "Description": "Callback when Alert is closed",
+            "Type": "(e: MouseEvent) => void",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

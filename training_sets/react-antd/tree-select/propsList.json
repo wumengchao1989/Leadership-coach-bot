@@ -1,0 +1,306 @@
+{
+  "tree-select": {
+    "name": "tree-select",
+    "subComponentsList": [
+      {
+        "name": "tree-select",
+        "propList": [
+          {
+            "Name": "allowClear",
+            "Description": "Whether allow clear",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "autoClearSearchValue",
+            "Description": "If auto clear search input value when multiple select is selected/deselected",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "bordered",
+            "Description": "Whether has border style",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "defaultValue",
+            "Description": "To set the initial selected treeNode(s)",
+            "Type": "string | string[]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "disabled",
+            "Description": "Disabled or not",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "dropdownClassName",
+            "Description": "The className of dropdown menu",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "dropdownMatchSelectWidth",
+            "Description": "Determine whether the dropdown menu and the select input are the same width. Default set min-width same as input. Will ignore when value less than select width. false will disable virtual scroll",
+            "Type": "boolean | number",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "dropdownRender",
+            "Description": "Customize dropdown content",
+            "Type": "(originNode: ReactNode, props) => ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "dropdownStyle",
+            "Description": "To set the style of the dropdown menu",
+            "Type": "CSSProperties",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "filterTreeNode",
+            "Description": "Whether to filter treeNodes by input value. The value of treeNodeFilterProp is used for filtering by default",
+            "Type": "boolean | function(inputValue: string, treeNode: TreeNode) (should return boolean)",
+            "Default": "function",
+            "Version": ""
+          },
+          {
+            "Name": "getPopupContainer",
+            "Description": "To set the container of the dropdown menu. The default is to create a div element in body, you can reset it to the scrolling area and make a relative reposition. example",
+            "Type": "function(triggerNode)",
+            "Default": "() => document.body",
+            "Version": ""
+          },
+          {
+            "Name": "labelInValue",
+            "Description": "Whether to embed label in value, turn the format of value from string to {value: string, label: ReactNode, halfChecked: string[]}",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "listHeight",
+            "Description": "Config popup height",
+            "Type": "number",
+            "Default": "256",
+            "Version": ""
+          },
+          {
+            "Name": "loadData",
+            "Description": "Load data asynchronously",
+            "Type": "function(node)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "maxTagCount",
+            "Description": "Max tag count to show. responsive will cost render performance",
+            "Type": "number | responsive",
+            "Default": "-",
+            "Version": "responsive: 4.10"
+          },
+          {
+            "Name": "maxTagPlaceholder",
+            "Description": "Placeholder for not showing tags",
+            "Type": "ReactNode | function(omittedValues)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "multiple",
+            "Description": "Support multiple or not, will be true when enable treeCheckable",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "placeholder",
+            "Description": "Placeholder of the select input",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "searchValue",
+            "Description": "Work with onSearch to make search value controlled",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "showArrow",
+            "Description": "Whether to show the suffixIcon，when single selection mode, default true",
+            "Type": "boolean",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "showCheckedStrategy",
+            "Description": "The way show selected item in box when treeCheckable set. Default: just show child nodes. TreeSelect.SHOW_ALL: show all checked treeNodes (include parent treeNode). TreeSelect.SHOW_PARENT: show checked treeNodes (just show parent treeNode)",
+            "Type": "TreeSelect.SHOW_ALL | TreeSelect.SHOW_PARENT | TreeSelect.SHOW_CHILD",
+            "Default": "TreeSelect.SHOW_CHILD",
+            "Version": ""
+          },
+          {
+            "Name": "showSearch",
+            "Description": "Support search or not",
+            "Type": "boolean",
+            "Default": "single: false | multiple: true",
+            "Version": ""
+          },
+          {
+            "Name": "size",
+            "Description": "To set the size of the select input",
+            "Type": "large | middle | small",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "suffixIcon",
+            "Description": "The custom suffix icon,you must set showArrow to true manually in multiple selection mode",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "switcherIcon",
+            "Description": "customize collapse | expand icon of tree node",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "treeCheckable",
+            "Description": "Whether to show checkbox on the treeNodes",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "treeCheckStrictly",
+            "Description": "Whether to check nodes precisely (in the checkable mode), means parent and child nodes are not associated, and it will make labelInValue be true",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "treeData",
+            "Description": "Data of the treeNodes, manual construction work is no longer needed if this property has been set(ensure the Uniqueness of each value)",
+            "Type": "array<{ value, title, children, [disabled, disableCheckbox, selectable, checkable] }>",
+            "Default": "[]",
+            "Version": ""
+          },
+          {
+            "Name": "treeDataSimpleMode",
+            "Description": "Enable simple mode of treeData. Changes the treeData schema to: [{id:1, pId:0, value:'1', title:\"test1\",...},...] where pId is parent node's id). It is possible to replace the default id and pId keys by providing object to treeDataSimpleMode",
+            "Type": "boolean | object<{ id: string, pId: string, rootPId: string }>",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "treeDefaultExpandAll",
+            "Description": "Whether to expand all treeNodes by default",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "treeDefaultExpandedKeys",
+            "Description": "Default expanded treeNodes",
+            "Type": "string[]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "treeExpandedKeys",
+            "Description": "Set expanded keys",
+            "Type": "string[]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "treeIcon",
+            "Description": "Shows the icon before a TreeNode's title. There is no default style; you must set a custom style for it if set to true",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "treeNodeFilterProp",
+            "Description": "Will be used for filtering if filterTreeNode returns true",
+            "Type": "string",
+            "Default": "value",
+            "Version": ""
+          },
+          {
+            "Name": "treeNodeLabelProp",
+            "Description": "Will render as content of select",
+            "Type": "string",
+            "Default": "title",
+            "Version": ""
+          },
+          {
+            "Name": "value",
+            "Description": "To set the current selected treeNode(s)",
+            "Type": "string | string[]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "virtual",
+            "Description": "Disable virtual scroll when set to false",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": "4.1.0"
+          },
+          {
+            "Name": "onChange",
+            "Description": "A callback function, can be executed when selected treeNodes or input value change",
+            "Type": "function(value, label, extra)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onDropdownVisibleChange",
+            "Description": "Called when dropdown open",
+            "Type": "function(open)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onSearch",
+            "Description": "A callback function, can be executed when the search input changes",
+            "Type": "function(value: string)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onSelect",
+            "Description": "A callback function, can be executed when you select a treeNode",
+            "Type": "function(value, node, extra)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onTreeExpand",
+            "Description": "A callback function, can be executed when treeNode expanded",
+            "Type": "function(expandedKeys)",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

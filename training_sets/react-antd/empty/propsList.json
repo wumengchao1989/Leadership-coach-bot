@@ -1,0 +1,33 @@
+{
+  "empty": {
+    "name": "empty",
+    "subComponentsList": [
+      {
+        "name": "empty",
+        "propList": [
+          {
+            "Name": "description",
+            "Description": "Customize description",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "image",
+            "Description": "Customize image. Will treat as image url when string provided",
+            "Type": "ReactNode",
+            "Default": "Empty.PRESENTED_IMAGE_DEFAULT",
+            "Version": ""
+          },
+          {
+            "Name": "imageStyle",
+            "Description": "The style of image",
+            "Type": "CSSProperties",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

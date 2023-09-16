@@ -1,0 +1,114 @@
+{
+  "mentions": {
+    "name": "mentions",
+    "subComponentsList": [
+      {
+        "name": "mentions",
+        "propList": [
+          {
+            "Name": "autoFocus",
+            "Description": "Auto get focus when component mounted",
+            "Type": "boolean",
+            "Default": "false"
+          },
+          {
+            "Name": "autoSize",
+            "Description": "Textarea height autosize feature, can be set to true | false or an object { minRows: 2, maxRows: 6 }",
+            "Type": "boolean | object",
+            "Default": "false"
+          },
+          {
+            "Name": "defaultValue",
+            "Description": "Default value",
+            "Type": "string",
+            "Default": "-"
+          },
+          {
+            "Name": "filterOption",
+            "Description": "Customize filter option logic",
+            "Type": "false | (input: string, option: OptionProps) => boolean",
+            "Default": "-"
+          },
+          {
+            "Name": "getPopupContainer",
+            "Description": "Set the mount HTML node for suggestions",
+            "Type": "() => HTMLElement",
+            "Default": "-"
+          },
+          {
+            "Name": "notFoundContent",
+            "Description": "Set mentions content when not match",
+            "Type": "ReactNode",
+            "Default": "Not Found"
+          },
+          {
+            "Name": "placement",
+            "Description": "Set popup placement",
+            "Type": "top | bottom",
+            "Default": "bottom"
+          },
+          {
+            "Name": "prefix",
+            "Description": "Set trigger prefix keyword",
+            "Type": "string | string[]",
+            "Default": "@"
+          },
+          {
+            "Name": "split",
+            "Description": "Set split string before and after selected mention",
+            "Type": "string",
+            "Default": ""
+          },
+          {
+            "Name": "validateSearch",
+            "Description": "Customize trigger search logic",
+            "Type": "(text: string, props: MentionsProps) => void",
+            "Default": "-"
+          },
+          {
+            "Name": "value",
+            "Description": "Set value of mentions",
+            "Type": "string",
+            "Default": "-"
+          },
+          {
+            "Name": "onBlur",
+            "Description": "Trigger when mentions lose focus",
+            "Type": "() => void",
+            "Default": "-"
+          },
+          {
+            "Name": "onChange",
+            "Description": "Trigger when value changed",
+            "Type": "(text: string) => void",
+            "Default": "-"
+          },
+          {
+            "Name": "onFocus",
+            "Description": "Trigger when mentions get focus",
+            "Type": "() => void",
+            "Default": "-"
+          },
+          {
+            "Name": "onResize",
+            "Description": "The callback function that is triggered when textarea resize",
+            "Type": "function({ width, height })",
+            "Default": "-"
+          },
+          {
+            "Name": "onSearch",
+            "Description": "Trigger when prefix hit",
+            "Type": "(text: string, prefix: string) => void",
+            "Default": "-"
+          },
+          {
+            "Name": "onSelect",
+            "Description": "Trigger when user select the option",
+            "Type": "(option: OptionProps, prefix: string) => void",
+            "Default": "-"
+          }
+        ]
+      }
+    ]
+  }
+}

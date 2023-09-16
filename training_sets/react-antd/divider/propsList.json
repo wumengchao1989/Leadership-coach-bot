@@ -1,0 +1,54 @@
+{
+  "divider": {
+    "name": "divider",
+    "subComponentsList": [
+      {
+        "name": "divider",
+        "propList": [
+          {
+            "Name": "className",
+            "Description": "The className of container",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "dashed",
+            "Description": "Whether line is dashed",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "orientation",
+            "Description": "The position of title inside divider",
+            "Type": "left | right | center",
+            "Default": "center",
+            "Version": ""
+          },
+          {
+            "Name": "plain",
+            "Description": "Divider text show as plain style",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": "4.2.0"
+          },
+          {
+            "Name": "style",
+            "Description": "The style object of container",
+            "Type": "CSSProperties",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "type",
+            "Description": "The direction type of divider",
+            "Type": "horizontal | vertical",
+            "Default": "horizontal",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

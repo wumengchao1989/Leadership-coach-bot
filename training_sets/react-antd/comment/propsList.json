@@ -1,0 +1,54 @@
+{
+  "comment": {
+    "name": "comment",
+    "subComponentsList": [
+      {
+        "name": "comment",
+        "propList": [
+          {
+            "Name": "actions",
+            "Description": "List of action items rendered below the comment content",
+            "Type": "Array<ReactNode>",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "author",
+            "Description": "The element to display as the comment author",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "avatar",
+            "Description": "The element to display as the comment avatar - generally an antd Avatar or src",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "children",
+            "Description": "Nested comments should be provided as children of the Comment",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "content",
+            "Description": "The main content of the comment",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "datetime",
+            "Description": "A datetime element containing the time to be displayed",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

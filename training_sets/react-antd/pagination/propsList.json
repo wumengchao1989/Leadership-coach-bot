@@ -1,0 +1,145 @@
+{
+  "pagination": {
+    "name": "pagination",
+    "subComponentsList": [
+      {
+        "name": "pagination",
+        "propList": [
+          {
+            "Name": "current",
+            "Description": "Current page number",
+            "Type": "number",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "defaultCurrent",
+            "Description": "Default initial page number",
+            "Type": "number",
+            "Default": "1",
+            "Version": ""
+          },
+          {
+            "Name": "defaultPageSize",
+            "Description": "Default number of data items per page",
+            "Type": "number",
+            "Default": "10",
+            "Version": ""
+          },
+          {
+            "Name": "disabled",
+            "Description": "Disable pagination",
+            "Type": "boolean",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "hideOnSinglePage",
+            "Description": "Whether to hide pager on single page",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "itemRender",
+            "Description": "To customize item's innerHTML",
+            "Type": "(page, type: 'page' | 'prev' | 'next', originalElement) => React.ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "pageSize",
+            "Description": "Number of data items per page",
+            "Type": "number",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "pageSizeOptions",
+            "Description": "Specify the sizeChanger options",
+            "Type": "string[]",
+            "Default": "[10, 20, 50, 100]",
+            "Version": ""
+          },
+          {
+            "Name": "responsive",
+            "Description": "If size is not specified, Pagination would resize according to the width of the window",
+            "Type": "boolean",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "showLessItems",
+            "Description": "Show less page items",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "showQuickJumper",
+            "Description": "Determine whether you can jump to pages directly",
+            "Type": "boolean | { goButton: ReactNode }",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "showSizeChanger",
+            "Description": "Determine whether to show pageSize select, it will be true when total > 50",
+            "Type": "boolean",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "showTitle",
+            "Description": "Show page item's title",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "showTotal",
+            "Description": "To display the total number and range",
+            "Type": "function(total, range)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "simple",
+            "Description": "Whether to use simple mode",
+            "Type": "boolean",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "size",
+            "Description": "Specify the size of Pagination, can be set to small",
+            "Type": "default | small",
+            "Default": "default",
+            "Version": ""
+          },
+          {
+            "Name": "total",
+            "Description": "Total number of data items",
+            "Type": "number",
+            "Default": "0",
+            "Version": ""
+          },
+          {
+            "Name": "onChange",
+            "Description": "Called when the page number or pageSize is changed, and it takes the resulting page number and pageSize as its arguments",
+            "Type": "function(page, pageSize)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onShowSizeChange",
+            "Description": "Called when pageSize is changed",
+            "Type": "function(current, size)",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

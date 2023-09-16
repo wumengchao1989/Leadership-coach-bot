@@ -1,0 +1,145 @@
+{
+  "tabs": {
+    "name": "tabs",
+    "subComponentsList": [
+      {
+        "name": "tabs",
+        "propList": [
+          {
+            "Name": "activeKey",
+            "Description": "Current TabPane's key",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "addIcon",
+            "Description": "Customize add icon",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": "4.4.0"
+          },
+          {
+            "Name": "animated",
+            "Description": "Whether to change tabs with animation. Only works while tabPosition=\"top\"",
+            "Type": "boolean | { inkBar: boolean, tabPane: boolean }",
+            "Default": "{ inkBar: true, tabPane: false }",
+            "Version": ""
+          },
+          {
+            "Name": "centered",
+            "Description": "Centers tabs",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": "4.4.0"
+          },
+          {
+            "Name": "defaultActiveKey",
+            "Description": "Initial active TabPane's key, if activeKey is not set",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "hideAdd",
+            "Description": "Hide plus icon or not. Only works while type=\"editable-card\"",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "moreIcon",
+            "Description": "The custom icon of ellipsis",
+            "Type": "ReactNode",
+            "Default": "<EllipsisOutlined />",
+            "Version": "4.14.0"
+          },
+          {
+            "Name": "renderTabBar",
+            "Description": "Replace the TabBar",
+            "Type": "(props: DefaultTabBarProps, DefaultTabBar: React.ComponentClass) => React.ReactElement",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "size",
+            "Description": "Preset tab bar size",
+            "Type": "large | default | small",
+            "Default": "default",
+            "Version": ""
+          },
+          {
+            "Name": "tabBarExtraContent",
+            "Description": "Extra content in tab bar",
+            "Type": "ReactNode | {left?: ReactNode, right?: ReactNode}",
+            "Default": "-",
+            "Version": "object: 4.6.0"
+          },
+          {
+            "Name": "tabBarGutter",
+            "Description": "The gap between tabs",
+            "Type": "number",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "tabBarStyle",
+            "Description": "Tab bar style object",
+            "Type": "object",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "tabPosition",
+            "Description": "Position of tabs",
+            "Type": "top | right | bottom | left",
+            "Default": "top",
+            "Version": ""
+          },
+          {
+            "Name": "destroyInactiveTabPane",
+            "Description": "Whether destroy inactive TabPane when change tab",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "type",
+            "Description": "Basic style of tabs",
+            "Type": "line | card | editable-card",
+            "Default": "line",
+            "Version": ""
+          },
+          {
+            "Name": "onChange",
+            "Description": "Callback executed when active tab is changed",
+            "Type": "function(activeKey) {}",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onEdit",
+            "Description": "Callback executed when tab is added or removed. Only works while type=\"editable-card\"",
+            "Type": "(targetKey, action) => void",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onTabClick",
+            "Description": "Callback executed when tab is clicked",
+            "Type": "function(key: string, event: MouseEvent)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onTabScroll",
+            "Description": "Trigger when tab scroll",
+            "Type": "function({ direction: left | right | top | bottom })",
+            "Default": "-",
+            "Version": "4.3.0"
+          }
+        ]
+      }
+    ]
+  }
+}

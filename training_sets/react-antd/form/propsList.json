@@ -1,0 +1,152 @@
+{
+  "form": {
+    "name": "form",
+    "subComponentsList": [
+      {
+        "name": "form",
+        "propList": [
+          {
+            "Name": "colon",
+            "Description": "Configure the default value of colon for Form.Item. Indicates whether the colon after the label is displayed (only effective when prop layout is horizontal)",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "component",
+            "Description": "Set the Form rendering element. Do not create a DOM node for false",
+            "Type": "ComponentType | false",
+            "Default": "form",
+            "Version": ""
+          },
+          {
+            "Name": "fields",
+            "Description": "Control of form fields through state management (such as redux). Not recommended for non-strong demand. View example",
+            "Type": "FieldData[]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "form",
+            "Description": "Form control instance created by Form.useForm(). Automatically created when not provided",
+            "Type": "FormInstance",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "initialValues",
+            "Description": "Set value by Form initialization or reset",
+            "Type": "object",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "labelAlign",
+            "Description": "The text align of label of all items",
+            "Type": "left | right",
+            "Default": "right",
+            "Version": ""
+          },
+          {
+            "Name": "labelCol",
+            "Description": "Label layout, like <Col> component. Set span offset value like {span: 3, offset: 12} or sm: {span: 3, offset: 12}",
+            "Type": "object",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "layout",
+            "Description": "Form layout",
+            "Type": "horizontal | vertical | inline",
+            "Default": "horizontal",
+            "Version": ""
+          },
+          {
+            "Name": "name",
+            "Description": "Form name. Will be the prefix of Field id",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "preserve",
+            "Description": "Keep field value even when field removed",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": "4.4.0"
+          },
+          {
+            "Name": "requiredMark",
+            "Description": "Required mark style. Can use required mark or optional mark. You can not config to single Form.Item since this is a Form level config",
+            "Type": "boolean | optional",
+            "Default": "true",
+            "Version": "4.6.0"
+          },
+          {
+            "Name": "scrollToFirstError",
+            "Description": "Auto scroll to first failed field when submit",
+            "Type": "boolean | Options",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "size",
+            "Description": "Set field component size (antd components only)",
+            "Type": "small | middle | large",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "validateMessages",
+            "Description": "Validation prompt template, description see below",
+            "Type": "ValidateMessages",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "validateTrigger",
+            "Description": "Config field validate trigger",
+            "Type": "string | string[]",
+            "Default": "onChange",
+            "Version": "4.3.0"
+          },
+          {
+            "Name": "wrapperCol",
+            "Description": "The layout for input controls, same as labelCol",
+            "Type": "object",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onFieldsChange",
+            "Description": "Trigger when field updated",
+            "Type": "function(changedFields, allFields)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onFinish",
+            "Description": "Trigger after submitting the form and verifying data successfully",
+            "Type": "function(values)",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onFinishFailed",
+            "Description": "Trigger after submitting the form and verifying data failed",
+            "Type": "function({ values, errorFields, outOfDate })",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onValuesChange",
+            "Description": "Trigger when value updated",
+            "Type": "function(changedValues, allValues)",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "breadcrumb": {
+    "name": "breadcrumb",
+    "subComponentsList": [
+      {
+        "name": "breadcrumb",
+        "propList": [
+          {
+            "Name": "itemRender",
+            "Description": "Custom item renderer",
+            "Type": "(route, params, routes, paths) => ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "params",
+            "Description": "Routing parameters",
+            "Type": "object",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "routes",
+            "Description": "The routing stack information of router",
+            "Type": "routes[]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "separator",
+            "Description": "Custom separator",
+            "Type": "ReactNode",
+            "Default": "/",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}

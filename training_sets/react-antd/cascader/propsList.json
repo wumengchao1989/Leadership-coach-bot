@@ -1,0 +1,201 @@
+{
+  "cascader": {
+    "name": "cascader",
+    "subComponentsList": [
+      {
+        "name": "cascader",
+        "propList": [
+          {
+            "Name": "allowClear",
+            "Description": "Whether allow clear",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "autoFocus",
+            "Description": "If get focus when component mounted",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "bordered",
+            "Description": "Whether has border style",
+            "Type": "boolean",
+            "Default": "true",
+            "Version": ""
+          },
+          {
+            "Name": "changeOnSelect",
+            "Description": "Change value on each selection if set to true, see above demo for details",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "className",
+            "Description": "The additional css class",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "defaultValue",
+            "Description": "Initial selected value",
+            "Type": "string[] | number[]",
+            "Default": "[]",
+            "Version": ""
+          },
+          {
+            "Name": "disabled",
+            "Description": "Whether disabled select",
+            "Type": "boolean",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "displayRender",
+            "Description": "The render function of displaying selected options",
+            "Type": "(label, selectedOptions) => ReactNode",
+            "Default": "label => label.join(/)",
+            "Version": ""
+          },
+          {
+            "Name": "dropdownRender",
+            "Description": "Customize dropdown content",
+            "Type": "(menus: ReactNode) => ReactNode",
+            "Default": "-",
+            "Version": "4.4.0"
+          },
+          {
+            "Name": "expandIcon",
+            "Description": "Customize the current item expand icon",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": "4.4.0"
+          },
+          {
+            "Name": "expandTrigger",
+            "Description": "expand current item when click or hover, one of click hover",
+            "Type": "string",
+            "Default": "click",
+            "Version": ""
+          },
+          {
+            "Name": "fieldNames",
+            "Description": "Custom field name for label and value and children",
+            "Type": "object",
+            "Default": "{ label: label, value: value, children: children }",
+            "Version": ""
+          },
+          {
+            "Name": "getPopupContainer",
+            "Description": "Parent Node which the selector should be rendered to. Default to body. When position issues happen, try to modify it into scrollable content and position it relative. example",
+            "Type": "function(triggerNode)",
+            "Default": "() => document.body",
+            "Version": ""
+          },
+          {
+            "Name": "loadData",
+            "Description": "To load option lazily, and it cannot work with showSearch",
+            "Type": "(selectedOptions) => void",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "notFoundContent",
+            "Description": "Specify content to show when no result matches",
+            "Type": "string",
+            "Default": "Not Found",
+            "Version": ""
+          },
+          {
+            "Name": "options",
+            "Description": "The data options of cascade",
+            "Type": "Option[]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "placeholder",
+            "Description": "The input placeholder",
+            "Type": "string",
+            "Default": "Please select",
+            "Version": ""
+          },
+          {
+            "Name": "popupClassName",
+            "Description": "The additional className of popup overlay",
+            "Type": "string",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "popupPlacement",
+            "Description": "Use preset popup align config from builtinPlacements：bottomLeft bottomRight topLeft topRight",
+            "Type": "string",
+            "Default": "bottomLeft",
+            "Version": ""
+          },
+          {
+            "Name": "popupVisible",
+            "Description": "Set visible of cascader popup",
+            "Type": "boolean",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "showSearch",
+            "Description": "Whether show search input in single mode",
+            "Type": "boolean | Object",
+            "Default": "false",
+            "Version": ""
+          },
+          {
+            "Name": "size",
+            "Description": "The input size",
+            "Type": "large | middle | small",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "style",
+            "Description": "The additional style",
+            "Type": "CSSProperties",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "suffixIcon",
+            "Description": "The custom suffix icon",
+            "Type": "ReactNode",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "value",
+            "Description": "The selected value",
+            "Type": "string[] | number[]",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onChange",
+            "Description": "Callback when finishing cascader select",
+            "Type": "(value, selectedOptions) => void",
+            "Default": "-",
+            "Version": ""
+          },
+          {
+            "Name": "onPopupVisibleChange",
+            "Description": "Callback when popup shown or hidden",
+            "Type": "(value) => void",
+            "Default": "-",
+            "Version": ""
+          }
+        ]
+      }
+    ]
+  }
+}
