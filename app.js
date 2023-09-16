@@ -10,7 +10,6 @@ const { keyv } = require("./utils/keyv_cache");
 // 1st party dependencies
 var configData = require("./config/connection");
 var indexRouter = require("./routes/index");
-var mo = require("./api/speech2text");
 keyv.clear();
 async function getApp() {
   // Database

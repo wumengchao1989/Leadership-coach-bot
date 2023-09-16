@@ -95,25 +95,6 @@ const generateComponentPropsEmbeddings = async (req, res) => {
   });
 };
 
-const getComponentPropPreInfo = async (prompt) => {
-  const promptEmbeddingResult = await classfiedBot.requestEmbeddings(prompt);
-  const promptEmbedding = promptEmbeddingResult.data[0].embedding;
-  const docs = await componentPropsEmbeddings.find();
-  let maxSimilarity = -10000;
-  let maxSimilarityCombinedDoc = "";
-  let maxSimilarityCombinedDocId = "";
-  for (let item of docs) {
-    const curEmbedding = item.embedding;
-    const curSimilarity = similarity(curEmbedding, promptEmbedding);
-    if (maxSimilarity < curSimilarity) {
-      maxSimilarityCombinedDoc = item.combinedDoc;
-      maxSimilarity = curSimilarity;
-      maxSimilarityCombinedDocId = item._id;
-    }
-  }
-  return { maxSimilarityCombinedDoc, maxSimilarityCombinedDocId };
-};
-
 module.exports = {
   generateEmbeddings,
   generateComponentEmbeddings,
