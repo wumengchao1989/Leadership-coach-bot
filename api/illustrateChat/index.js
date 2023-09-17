@@ -1,4 +1,4 @@
-const illustrateChatGroups = require("../../models/illustrateChatGroup");
+const illustrateChatGroups = require("../../models/coachChatGroup");
 const { speechToText } = require("../speech2text");
 
 async function getIllustrateChatGroups(req, res) {

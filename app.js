@@ -1,5 +1,7 @@
 var createError = require("http-errors");
 var express = require("express");
+const fileUpload = require("express-fileupload");
+
 var mongoose = require("mongoose");
 var path = require("path");
 var cookieParser = require("cookie-parser");
@@ -17,6 +19,7 @@ async function getApp() {
   mongoose.connect(connectionInfo.DATABASE_URL);
 
   var app = express();
+  app.use(fileUpload());
 
   var port = normalizePort(process.env.PORT || "8080");
   app.set("port", port);

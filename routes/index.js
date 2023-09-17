@@ -7,10 +7,7 @@ const {
   addChatGroups,
   deleteChatGroups,
 } = require("../api/openai");
-const {
-  generateComponentEmbeddings,
-  generateEmbeddings,
-} = require("../api/embedding");
+const { generateEmbeddings } = require("../utils/embedding");
 
 const { textToSpeech } = require("../api/text2speech");
 const {
@@ -18,16 +15,14 @@ const {
   getIllustrateChatGroups,
   sendIllustrateMessage,
 } = require("../api/illustrateChat");
+const { coachDataUpload } = require("../api/dataImporter");
 
 router.post("/api/coach/send_request", send_request);
 router.get("/api/coach/get_chat_groups", getChatGroups);
 router.post("/api/coach/add_chat_groups", addChatGroups);
 router.post("/api/coach/delete_chat_groups", deleteChatGroups);
 router.post("/api/coach/generate_embeddings", generateEmbeddings);
-router.post(
-  "/api/coach/generate_component_embeddings",
-  generateComponentEmbeddings
-);
+
 router.get("/api/coach/aiinstructor/texttospeech", textToSpeech);
 
 router.post(
@@ -43,4 +38,6 @@ router.post(
   "/api/coach/illustarte/send_illustrate_message",
   sendIllustrateMessage
 );
+
+router.post("/api/coach/illustarte/coach_data_upload", coachDataUpload);
 module.exports = router;

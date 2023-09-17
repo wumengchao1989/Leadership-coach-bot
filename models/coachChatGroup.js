@@ -39,7 +39,4 @@ const illustrateChatGroupSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model(
-  "illustCratehatGroups",
-  illustrateChatGroupSchema
-);
+module.exports = mongoose.model("coachChatGroup", illustrateChatGroupSchema);

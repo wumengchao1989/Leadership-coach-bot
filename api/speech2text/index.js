@@ -2,7 +2,7 @@ const { containerClient } = require("../../utils/BlobService");
 const path = require("path");
 const fs = require("fs");
 const sdk = require("microsoft-cognitiveservices-speech-sdk");
-const illustrateChatGroups = require("../../models/illustrateChatGroup");
+const illustrateChatGroups = require("../../models/coachChatGroup");
 const {
   azure_chat_deployment_name,
   azure_chatapi,
