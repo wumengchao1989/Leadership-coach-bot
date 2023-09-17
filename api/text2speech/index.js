@@ -1,8 +1,13 @@
 const sdk = require("microsoft-cognitiveservices-speech-sdk");
 const path = require("path");
+const fs = require("fs");
 
 // Create the speech synthesizer.
 async function textToSpeech(text, audioFileName) {
+  const audioDownloadedPath = path.resolve("./public/audio");
+  if (!fs.existsSync(audioDownloadedPath)) {
+    fs.mkdirSync(audioDownloadedPath);
+  }
   const audioFile = path.resolve(`./public/audio/${audioFileName}`);
   // This example requires environment variables named "SPEECH_KEY" and "SPEECH_REGION"
   const speechConfig = sdk.SpeechConfig.fromSubscription(

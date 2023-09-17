@@ -19,22 +19,28 @@ const {
   sendIllustrateMessage,
 } = require("../api/illustrateChat");
 
-router.post("/api/send_request", send_request);
-router.get("/api/get_chat_groups", getChatGroups);
-router.post("/api/add_chat_groups", addChatGroups);
-router.post("/api/delete_chat_groups", deleteChatGroups);
-router.post("/api/generate_embeddings", generateEmbeddings);
-router.post("/api/generate_component_embeddings", generateComponentEmbeddings);
-router.get("/api/aiinstructor/texttospeech", textToSpeech);
+router.post("/api/coach/send_request", send_request);
+router.get("/api/coach/get_chat_groups", getChatGroups);
+router.post("/api/coach/add_chat_groups", addChatGroups);
+router.post("/api/coach/delete_chat_groups", deleteChatGroups);
+router.post("/api/coach/generate_embeddings", generateEmbeddings);
+router.post(
+  "/api/coach/generate_component_embeddings",
+  generateComponentEmbeddings
+);
+router.get("/api/coach/aiinstructor/texttospeech", textToSpeech);
 
 router.post(
-  "/api/illustarte/add_illustrate_chat_groups",
+  "/api/coach/illustarte/add_illustrate_chat_groups",
   addIllustrateChatGroups
 );
 router.get(
-  "/api/illustrate/get_illustrate_chat_groups",
+  "/api/coach/illustrate/get_illustrate_chat_groups",
   getIllustrateChatGroups
 );
 
-router.post("/api/illustarte/send_illustrate_message", sendIllustrateMessage);
+router.post(
+  "/api/coach/illustarte/send_illustrate_message",
+  sendIllustrateMessage
+);
 module.exports = router;

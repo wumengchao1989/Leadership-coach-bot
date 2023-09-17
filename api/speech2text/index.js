@@ -15,8 +15,13 @@ const { roleMap, roleDescriptionMap } = require("../../utils/constants");
 const { textToSpeech } = require("../text2speech");
 
 speechConfig.speechRecognitionLanguage = "en-US";
-async function speechToText(blobName) {
+async function speechToText(blobName, chatGroupId) {
+  const audioDownloadedPath = path.resolve("./audioDownloaded");
+  if (!fs.existsSync(audioDownloadedPath)) {
+    fs.mkdirSync(audioDownloadedPath);
+  }
   const savepath = path.resolve(`./audioDownloaded/${blobName}`);
+
   const blobClient = containerClient.getBlobClient(blobName);
   await blobClient.downloadToFile(savepath);
   const audioFile = fs.readFileSync(savepath);
@@ -26,7 +31,7 @@ async function speechToText(blobName) {
     async (result) => {
       if (result.privText) {
         const currentChatGroup = await illustrateChatGroups.findById(
-          "64ffef6ece40662d8a3069c7"
+          chatGroupId
         );
         if (currentChatGroup) {
           const message = {
