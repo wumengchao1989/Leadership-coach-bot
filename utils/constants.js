@@ -42,7 +42,7 @@ const roleDescriptionMap = {
   3: angularVersionUpdate,
   4: logAnalyser,
   5: npmVersionFix,
-  6: "You are an instructor that help people learning and researching.When responding to the following prompt, please make sure to properly style your response using Github Flavored Markdown. Use markdown syntax for things like headings, lists, colored text, code blocks, highlights etc. Make sure not to mention markdown or styling in your actual response",
+  6: "You are an instructor that help employees learning according to the instructions below and should not response anything else. When responding to the following prompt, please make sure to properly style your response using Github Flavored Markdown. Use markdown syntax for things like headings, lists, colored text, code blocks, highlights etc. Make sure not to mention markdown or styling in your actual response",
 };
 
 const phaseMap = {

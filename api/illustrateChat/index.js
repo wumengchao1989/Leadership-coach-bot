@@ -1,5 +1,6 @@
 const illustrateChatGroups = require("../../models/coachChatGroup");
-const { speechToText } = require("../speech2text");
+const { speechToText, generateInitResponse } = require("../speech2text");
+const { keyv } = require("../../utils/keyv_cache");
 
 async function getIllustrateChatGroups(req, res) {
   const { id } = req.query;
@@ -31,8 +32,13 @@ async function addIllustrateChatGroups(req, res) {
 }
 
 async function sendIllustrateMessage(req, res) {
-  const { bolbName, chatGroupId } = req.body;
-  await speechToText(bolbName, chatGroupId);
+  const { bolbName, chatGroupId, isInit } = req.body;
+  if (isInit) {
+    await generateInitResponse(chatGroupId);
+  } else {
+    await keyv.set(chatGroupId, true);
+    await speechToText(bolbName, chatGroupId);
+  }
   res.json({
     success: true,
   });

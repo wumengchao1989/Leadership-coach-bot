@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 
 // Create the speech synthesizer.
-async function textToSpeech(text, audioFileName) {
+async function textToSpeech(text, audioFileName, instructorName) {
   const audioDownloadedPath = path.resolve("./public/audio");
   if (!fs.existsSync(audioDownloadedPath)) {
     fs.mkdirSync(audioDownloadedPath);
@@ -14,7 +14,13 @@ async function textToSpeech(text, audioFileName) {
     process.env.SPEECH_KEY,
     process.env.SPEECH_REGION
   );
-  speechConfig.speechSynthesisVoiceName = "en-US-GuyNeural";
+  const voiceName =
+    instructorName === "Jeff"
+      ? "en-US-DavisNeural"
+      : instructorName === "Shawni"
+      ? "en-US-ElizabethNeural"
+      : "en-US-GuyNeural";
+  speechConfig.speechSynthesisVoiceName = voiceName;
   const audioConfig = sdk.AudioConfig.fromAudioFileOutput(audioFile);
   var synthesizer = new sdk.SpeechSynthesizer(speechConfig, audioConfig);
   const speechToText = () =>
