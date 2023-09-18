@@ -3,7 +3,6 @@ const { speechToText } = require("../speech2text");
 
 async function getIllustrateChatGroups(req, res) {
   const { id } = req.query;
-  console.log(id);
   let chatGroupsList = [];
   if (id) chatGroupsList = await illustrateChatGroups.findById(id);
   res.json({

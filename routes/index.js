@@ -15,7 +15,7 @@ const {
   getIllustrateChatGroups,
   sendIllustrateMessage,
 } = require("../api/illustrateChat");
-const { coachDataUpload } = require("../api/dataImporter");
+const { coachDataUpload, voiceAudioUpload } = require("../api/dataImporter");
 
 router.post("/api/coach/send_request", send_request);
 router.get("/api/coach/get_chat_groups", getChatGroups);
@@ -40,4 +40,6 @@ router.post(
 );
 
 router.post("/api/coach/illustarte/coach_data_upload", coachDataUpload);
+router.post("/api/coach/illustarte/voice_audio_upload", voiceAudioUpload);
+
 module.exports = router;
