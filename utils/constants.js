@@ -27,8 +27,7 @@ const angularVersionUpdate = `Update the code to adapt to Angular 16 and output 
 
 
 Please provide only the modified file content after making these updates without any instructions.`;
-const versionListPath = path.resolve("./package-version.json");
-const versionsInfo = fs.readFileSync(versionListPath).toString();
+
 const assistantLabel = "Veronica";
 const userLabel = "Mark";
 const logAnalyser =
@@ -58,6 +57,5 @@ module.exports = {
   assistantLabel,
   userLabel,
   roleDescriptionMap,
-  versionsInfo,
   phaseMap,
 };

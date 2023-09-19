@@ -43,8 +43,15 @@ async function sendIllustrateMessage(req, res) {
     success: true,
   });
 }
+async function resetIllustrateMessages(res, res) {
+  await illustrateChatGroups.updateMany({
+    chatMessages: [],
+  });
+  res.json({ success: true });
+}
 
 module.exports = {
+  resetIllustrateMessages,
   addIllustrateChatGroups,
   getIllustrateChatGroups,
   sendIllustrateMessage,

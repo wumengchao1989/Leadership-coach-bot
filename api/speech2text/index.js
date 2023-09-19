@@ -18,6 +18,7 @@ const { textToSpeech } = require("../text2speech");
 speechConfig.speechRecognitionLanguage = "en-US";
 
 async function generateInitResponse(chatGroupId) {
+  if (!chatGroupId) return;
   const roleDescription = roleDescriptionMap["6"];
   const currentChatGroup = await illustrateChatGroups.findById(chatGroupId);
   const chatGroupTitle = currentChatGroup.chatGroupTitle;
@@ -88,8 +89,18 @@ async function speechToText(blobName, chatGroupId) {
           currentChatGroup.chatMessages.push(message);
           await currentChatGroup.save();
           const roleDescription = roleDescriptionMap["6"];
+          const coachDataList = await coachData.find({
+            instructorName: currentChatGroup.chatGroupTitle,
+          });
+          const predefinedMessages = coachDataList.map((item) => {
+            return {
+              role: roleMap.user,
+              content: `Instructions:${item.coachData}`,
+            };
+          });
           const conversionInfo = [
             { role: roleMap.user, content: roleDescription },
+            ...predefinedMessages,
             {
               role: roleMap.user,
               content: result.privText,
