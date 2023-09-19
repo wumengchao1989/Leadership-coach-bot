@@ -16,6 +16,10 @@ const coachDataUpload = (req, res) => {
   }
   // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
   sampleFile = req.files.file;
+  const coachDataPath = path.resolve("./public/coachData");
+  if (!fs.existsSync(coachDataPath)) {
+    fs.mkdirSync(coachDataPath);
+  }
   const coachDataFilePath = path.resolve(
     `./public/coachData/${sampleFile.name}`
   );
