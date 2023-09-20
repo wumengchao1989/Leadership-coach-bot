@@ -78,7 +78,17 @@ async function speechToText(audioPath) {
 }
 
 const voiceAudioUpload = async (req, res) => {
-  const dirPath = path.resolve("./public/coachVoiceData/jeff003");
+  const audioDownloadedPath = path.resolve("./public/coachVoiceData");
+  if (!fs.existsSync(audioDownloadedPath)) {
+    fs.mkdirSync(audioDownloadedPath);
+  }
+  const audioDownloadedSinglePath = path.resolve(
+    "./public/coachVoiceData/jeff003"
+  );
+  if (!fs.existsSync(audioDownloadedSinglePath)) {
+    fs.mkdirSync(audioDownloadedSinglePath);
+  }
+  const dirPath = path.resolve(audioDownloadedSinglePath);
   const fileList = fs.readdirSync(dirPath);
   for await (let file of fileList) {
     var pathname = path.join(dirPath, file);

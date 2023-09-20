@@ -14,7 +14,27 @@ const speechConfig = sdk.SpeechConfig.fromSubscription(
 );
 const { roleMap, roleDescriptionMap } = require("../../utils/constants");
 const { textToSpeech } = require("../text2speech");
+const similarity = require("compute-cosine-similarity");
+const { getEmbeddings } = require("../../utils/embedding");
 
+const getBestCoachDataInfo = async (prompt, instructorName) => {
+  const promptEmbeddingCompletion = await getEmbeddings(prompt);
+  const promptEmbedding = promptEmbeddingCompletion.data[0].embedding;
+  const docs = await coachData.find({ instructorName });
+  let maxSimilarity = -10000;
+  let maxSimilarityContent = "";
+  let maxSimilarityContentId = "";
+  for (let item of docs) {
+    const curEmbedding = item.embedding;
+    const curSimilarity = similarity(curEmbedding, promptEmbedding);
+    if (maxSimilarity < curSimilarity) {
+      maxSimilarityContent = item.coachData;
+      maxSimilarity = curSimilarity;
+      maxSimilarityContentId = item._id;
+    }
+  }
+  return { maxSimilarityContent, maxSimilarityContentId };
+};
 speechConfig.speechRecognitionLanguage = "en-US";
 
 async function generateInitResponse(chatGroupId) {
@@ -88,7 +108,8 @@ async function speechToText(blobName, chatGroupId) {
           };
           currentChatGroup.chatMessages.push(message);
           await currentChatGroup.save();
-          const roleDescription = roleDescriptionMap["6"];
+
+          /* const roleDescription = roleDescriptionMap["6"];
           const coachDataList = await coachData.find({
             instructorName: currentChatGroup.chatGroupTitle,
           });
@@ -109,9 +130,13 @@ async function speechToText(blobName, chatGroupId) {
           const completion = await azure_chatapi.getChatCompletions(
             azure_chat_deployment_name,
             conversionInfo
+          ); */
+          const { maxSimilarityContent } = await getBestCoachDataInfo(
+            result.privText,
+            currentChatGroup.chatGroupTitle
           );
           const responseMessage = {
-            message: completion?.choices?.[0].message.content,
+            message: maxSimilarityContent,
             createAt: new Date(),
             userName: currentChatGroup.chatGroupTitle,
             reverse: true,
@@ -120,7 +145,7 @@ async function speechToText(blobName, chatGroupId) {
           };
           currentChatGroup.chatMessages.push(responseMessage);
           await textToSpeech(
-            completion?.choices?.[0].message.content,
+            maxSimilarityContent,
             blobName,
             currentChatGroup.chatGroupTitle
           );
