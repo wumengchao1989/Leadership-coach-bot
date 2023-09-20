@@ -2,7 +2,7 @@ const illustrateChatGroups = require("../../models/coachChatGroup");
 const { speechToText, generateInitResponse } = require("../speech2text");
 const { keyv } = require("../../utils/keyv_cache");
 const fs = require("fs");
-
+const path = require("path");
 async function getIllustrateChatGroups(req, res) {
   const { id } = req.query;
   let chatGroupsList = [];
