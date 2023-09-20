@@ -36,6 +36,7 @@ async function textToSpeech(text, audioFileName, instructorName) {
                 result.errorDetails +
                 "\nDid you set the speech resource key and region values?"
             );
+            reject(result.errorDetails);
           }
           synthesizer.close();
           synthesizer = null;

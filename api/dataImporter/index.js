@@ -26,6 +26,7 @@ const coachDataUpload = (req, res) => {
   // Use the mv() method to place the file somewhere on your server
   sampleFile.mv(coachDataFilePath, async function (err) {
     if (err) return res.status(500).send(err);
+    await coachData.deleteMany();
     const workSheetsFromFile = xlxs.parse(coachDataFilePath);
     for (let item of workSheetsFromFile) {
       if (item.name === "CoachData") {
@@ -36,12 +37,14 @@ const coachDataUpload = (req, res) => {
           const primaryCate = metaData[3];
           const content = metaData[4];
           const embedding = await getEmbeddings(content);
+          const primaryCateEmbeddings = await getEmbeddings(primaryCate);
           const tempData = {
             instructorName,
             primaryTitle: primaryCate,
             coachData: content,
             embedding: embedding.data[0].embedding,
             createAt: new Date(),
+            primaryTitleEmbeddings: primaryCateEmbeddings.data[0].embedding,
           };
           const tempCoachData = new coachData(tempData);
           await tempCoachData.save();

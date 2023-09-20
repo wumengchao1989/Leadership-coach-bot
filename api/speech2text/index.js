@@ -16,20 +16,44 @@ const { roleMap, roleDescriptionMap } = require("../../utils/constants");
 const { textToSpeech } = require("../text2speech");
 const similarity = require("compute-cosine-similarity");
 const { getEmbeddings } = require("../../utils/embedding");
-
+const { coachdataKeyv } = require("../../utils/keyv_cache");
+const emptyMessage =
+  "I can not find anything else related to your questions. Here is some additional documents you can refer.";
 const getBestCoachDataInfo = async (prompt, instructorName) => {
   const promptEmbeddingCompletion = await getEmbeddings(prompt);
   const promptEmbedding = promptEmbeddingCompletion.data[0].embedding;
   const docs = await coachData.find({ instructorName });
+
   let maxSimilarity = -10000;
-  let maxSimilarityContent = "";
-  let maxSimilarityContentId = "";
+  let maxSimilarityTitle = "";
   for (let item of docs) {
-    const curEmbedding = item.embedding;
+    const curEmbedding = item.primaryTitleEmbeddings;
     const curSimilarity = similarity(curEmbedding, promptEmbedding);
     if (maxSimilarity < curSimilarity) {
-      maxSimilarityContent = item.coachData;
+      maxSimilarityTitle = item.primaryTitle;
       maxSimilarity = curSimilarity;
+    }
+  }
+  const filtedDocs = docs.filter((item) => {
+    return item.primaryTitle === maxSimilarityTitle;
+  });
+  let docsNotVisited = [];
+  for await (let doc of filtedDocs) {
+    const isVisited = await coachdataKeyv.get(doc._id);
+    if (!isVisited) {
+      docsNotVisited.push(doc);
+    }
+  }
+
+  let maxContentSimilarity = -10000;
+  let maxSimilarityContent = "";
+  let maxSimilarityContentId = "";
+  for (let item of docsNotVisited) {
+    const curEmbedding = item.embedding;
+    const curSimilarity = similarity(curEmbedding, promptEmbedding);
+    if (maxContentSimilarity < curSimilarity) {
+      maxSimilarityContent = item.coachData;
+      maxContentSimilarity = curSimilarity;
       maxSimilarityContentId = item._id;
     }
   }
@@ -131,12 +155,14 @@ async function speechToText(blobName, chatGroupId) {
             azure_chat_deployment_name,
             conversionInfo
           ); */
-          const { maxSimilarityContent } = await getBestCoachDataInfo(
-            result.privText,
-            currentChatGroup.chatGroupTitle
-          );
+          const { maxSimilarityContent, maxSimilarityContentId } =
+            await getBestCoachDataInfo(
+              result.privText,
+              currentChatGroup.chatGroupTitle
+            );
+
           const responseMessage = {
-            message: maxSimilarityContent,
+            message: maxSimilarityContent || emptyMessage,
             createAt: new Date(),
             userName: currentChatGroup.chatGroupTitle,
             reverse: true,
@@ -145,11 +171,12 @@ async function speechToText(blobName, chatGroupId) {
           };
           currentChatGroup.chatMessages.push(responseMessage);
           await textToSpeech(
-            maxSimilarityContent,
+            responseMessage.message,
             blobName,
             currentChatGroup.chatGroupTitle
           );
           await currentChatGroup.save();
+          await coachdataKeyv.set(maxSimilarityContentId, true);
         }
       }
       speechRecognizer.close();

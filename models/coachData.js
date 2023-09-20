@@ -11,6 +11,10 @@ const coachDataGroupSchema = new Schema({
     type: String,
     retuired: true,
   },
+  primaryTitleEmbeddings: {
+    type: [Number],
+    required: false,
+  },
   coachData: {
     type: String,
     required: true,

@@ -8,11 +8,12 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
 const { format } = require("date-fns");
-const { keyv } = require("./utils/keyv_cache");
+const { keyv, coachdataKeyv } = require("./utils/keyv_cache");
 // 1st party dependencies
 var configData = require("./config/connection");
 var indexRouter = require("./routes/index");
 keyv.clear();
+coachdataKeyv.clear();
 async function getApp() {
   // Database
   var connectionInfo = await configData.getConnectionInfo();
@@ -21,7 +22,7 @@ async function getApp() {
   var app = express();
   app.use(fileUpload());
 
-  var port = normalizePort(process.env.PORT || "8080");
+  var port = normalizePort(process.env.PORT || "8084");
   app.set("port", port);
 
   // view engine setup
