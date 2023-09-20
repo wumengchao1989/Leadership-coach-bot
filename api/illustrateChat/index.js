@@ -1,6 +1,7 @@
 const illustrateChatGroups = require("../../models/coachChatGroup");
 const { speechToText, generateInitResponse } = require("../speech2text");
 const { keyv } = require("../../utils/keyv_cache");
+const fs = require("fs");
 
 async function getIllustrateChatGroups(req, res) {
   const { id } = req.query;
@@ -47,6 +48,16 @@ async function resetIllustrateMessages(res, res) {
   await illustrateChatGroups.updateMany({
     chatMessages: [],
   });
+  const audioDownloadedPath = path.resolve("./public/audio");
+  if (fs.existsSync(audioDownloadedPath)) {
+    const fileList = fs.readdirSync(audioDownloadedPath);
+    for await (let file of fileList) {
+      var pathname = path.join(audioDownloadedPath, file);
+      if (file.indexOf("init") !== -1) {
+        fs.unlinkSync(pathname);
+      }
+    }
+  }
   res.json({ success: true });
 }
 
